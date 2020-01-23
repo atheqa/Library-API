@@ -1,16 +1,17 @@
 const data = require("./data")
-console.log(data);
-
 
 function getBookByAuthor(author) {
     let matchedBooks = [];
 
-    for(idx = 0; idx < data.length; idx++) {
-        if(matchedBooks === author) {
-            data.push(author);
+    for(let idx = 0; idx < data.length; idx++) {
+        if(data[idx].author === author) {
+            matchedBooks.push(data[idx]);
         }
 
-    } return matchedBooks;
-}
+    } 
+    return matchedBooks;
+};
 
-console.log(getBookByAuthor("Reichs, Kathy"));
+// const kathyn_kirjat = getBookByAuthor(Reichs, Kathy);
+
+module.exports = { getBookByAuthor };
