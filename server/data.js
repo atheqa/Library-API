@@ -54,7 +54,5 @@ const data = [{
 }
 ]
 
-console.log(data);
-
 module.exports = data;
 
